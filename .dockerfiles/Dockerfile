@@ -10,6 +10,7 @@ WORKDIR     /srv/deploy_eb_docker
 # requiremments.txt 설치
 RUN         /root/.pyenv/versions/deploy_eb_docker/bin/pip install -r .requirements/deploy.txt
 
+# .config/supervisor/uwsgi.conf로 이동
 #RUN         uwsgi --http :8000 --chdir /srv/deploy_ec2/django_app --home /root/.pyenv/versions/deploy_eb_docker -w config.settings.debug
 
 # supervisor 파일 복사
