@@ -13,5 +13,9 @@ WSGI_APPLICATION = 'config.wsgi.deploy.application'
 DEBUG = False
 ALLOWED_HOSTS = config_secret_deploy['django']['allowed_hosts']
 
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+DATABASES = config_secret_deploy['django']['database']
+
 # print('@@@@@@@ DEBUG:', DEBUG)
 # print('@@@@@@@ ALLOWED_HOSTS:', ALLOWED_HOSTS)
