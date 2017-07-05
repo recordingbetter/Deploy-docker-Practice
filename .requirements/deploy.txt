@@ -1,3 +1,5 @@
 Django<1.12
 pytz==2017.2
+# db 변경되어 추가 Postgresql
 psycopg2<2.8
+pillow<4.3

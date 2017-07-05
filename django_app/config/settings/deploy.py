@@ -6,8 +6,8 @@ config_secret_deploy = json.loads(open(CONFIG_SECRET_DEPLOY_FILE).read())
 WSGI_APPLICATION = 'config.wsgi.deploy.application'
 
 # Static URLs
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
 
 
 DEBUG = False

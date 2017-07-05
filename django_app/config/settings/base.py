@@ -35,7 +35,8 @@ config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())
 
 SECRET_KEY = config_secret_common['django']['secret_key']
 
-
+# User 모델을 상속받을때
+AUTH_USER_MODEL = 'member.MyUser'
 
 
 # Application definition
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'member',
 
     # 'django_extensions',
     ]

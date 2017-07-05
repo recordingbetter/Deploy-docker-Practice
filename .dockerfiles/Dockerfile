@@ -26,6 +26,9 @@ COPY        .config/nginx/nginx-app.conf /etc/nginx/sites-available/
 RUN         ln -sf /etc/nginx/sites-available/nginx-app.conf /etc/nginx/sites-enabled/nginx.conf
 RUN         rm -rf /etc/nginx/sites-enabled/default
 
+# collectstatic
+RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --settings=config.settings.deploy --noinput
+
 CMD         supervisord -n
 # 80포트와 8000포트를 열어줌
 EXPOSE      80 8000
