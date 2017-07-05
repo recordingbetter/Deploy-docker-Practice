@@ -7,6 +7,7 @@
 .wsgi
 .static_root/
 static_root/
+.media/
 
 # Created by https://www.gitignore.io/api/macos,django,python,pycharm
 
@@ -205,3 +206,8 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/macos,django,python,pycharm
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

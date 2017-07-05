@@ -1,12 +1,11 @@
 # import os
-# import importlib
 #
+# from .base import ROOT_DIR
 #
-# print('settings __init__')
-# print(os.environ)
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(ROOT_DIR, '.static_root')
 #
-# config_module = importlib.import_module(os.environ['DJANGO_SETTINGS_MODULE'])
-# for setting in dir(config_module):
-#     locals()[setting]
-#
-#
+# # Media URLs
+# MEDIA_URL = '/media/'
+# # django_app/media
+# MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
