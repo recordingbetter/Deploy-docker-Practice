@@ -2,6 +2,8 @@
 FROM        recordingbetter/eb_ubuntu
 MAINTAINER  recordingbetter@gmail.com
 
+ENV         LANG C.UTF-8
+
 # 현재 경로의 모든 파일들을 컨테이너의 /srv/deploy_eb/docker 폴더에 복사
 COPY        . /srv/deploy_eb_docker
 # cd /srv/deploy_eb/docker 와 같음
@@ -27,7 +29,7 @@ RUN         ln -sf /etc/nginx/sites-available/nginx-app.conf /etc/nginx/sites-en
 RUN         rm -rf /etc/nginx/sites-enabled/default
 
 # collectstatic
-#RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --settings=config.settings.deploy --noinput
+RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --settings=config.settings.deploy --noinput
 
 CMD         supervisord -n
 # 80포트와 8000포트를 열어줌

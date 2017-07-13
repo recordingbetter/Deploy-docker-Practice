@@ -2,6 +2,8 @@
 FROM        eb_ubuntu
 MAINTAINER  recordingbetter@gmail.com
 
+ENV         LANG C.UTF-8
+
 # 현재 경로의 모든 파일들을 컨테이너의 /srv/deploy_eb/docker 폴더에 복사
 COPY        . /srv/deploy_eb_docker
 # cd /srv/deploy_eb/docker 와 같음
