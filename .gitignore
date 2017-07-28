@@ -8,6 +8,11 @@
 .static_root/
 static_root/
 .media/
+.dockerfiles/
+.ebextensions/
+.elasticbeanstalk/
+.config/
+
 
 # Created by https://www.gitignore.io/api/macos,django,python,pycharm
 
