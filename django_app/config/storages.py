@@ -10,3 +10,7 @@ class StaticStorage(S3Boto3Storage):
 class MediaStorage(S3Boto3Storage):
     location = settings.MEDIAFILES_LOCATION
     file_overwrite = False
+
+
+class TemplateStorage(S3Boto3Storage):
+    location = settings.TEMPLATEFILES_LOCATION

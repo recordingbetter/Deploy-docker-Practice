@@ -17,6 +17,8 @@ STATICFILES_LOCATION = 'static'
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'config.storages.MediaStorage'
 STATICFILES_STORAGE = 'config.storages.StaticStorage'
+TEMPLATEFILES_LOCATION = 'templates'
+TEMPLATEFILES_STORAGE = 'config.storages.TemplateStorage'
 
 
 # Static URLs
@@ -28,6 +30,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 # 프로젝트 내부에 저장하지 않고 AWS s3에 저장할거라 필요없음
 # MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+
+TEMPLATE_DIR = '/templates/'
 
 DEBUG = False
 ALLOWED_HOSTS = config_secret_deploy['django']['allowed_hosts']
