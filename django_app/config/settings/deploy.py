@@ -33,7 +33,7 @@ MEDIA_URL = '/media/'
 
 TEMPLATE_DIR = '/templates/'
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = config_secret_deploy['django']['allowed_hosts']
 
 # Database
