@@ -22,7 +22,7 @@ import member.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^/$', member.views.index, name='index'),
+    url(r'^$', member.views.index, name='index'),
     ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
