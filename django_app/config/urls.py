@@ -19,10 +19,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 import member.views
+import workout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', member.views.index, name='index'),
+    url(r'^api/workout/$', workout.views.WorkoutListAPIView.as_view(), name='workout_list')
     ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
