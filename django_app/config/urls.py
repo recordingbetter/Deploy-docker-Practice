@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 
 import member.views
-import workout
+import workout.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

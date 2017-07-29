@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'member',
     'workout',
+    'rest_framework',
 
     # 'django_extensions',
     ]
