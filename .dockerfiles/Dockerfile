@@ -28,6 +28,13 @@ COPY        .config/nginx/nginx-app.conf /etc/nginx/sites-available/
 RUN         ln -sf /etc/nginx/sites-available/nginx-app.conf /etc/nginx/sites-enabled/nginx.conf
 RUN         rm -rf /etc/nginx/sites-enabled/default
 
+# front 프로젝트복사
+WORKDIR     /srv
+RUN         git clone https://github.com/recordingbetter/front-test.git front
+WORKDIR     /srv/front
+RUN         npm install
+RUN         npm run build
+
 # collectstatic
 #RUN         /root/.pyenv/versions/deploy_eb_docker/bin/python /srv/deploy_eb_docker/django_app/manage.py collectstatic --settings=config.settings.deploy --noinput
 
