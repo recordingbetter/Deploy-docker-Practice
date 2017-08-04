@@ -1,6 +1,7 @@
 Django<1.12
-pytz==2017.2
+pytz<2017.3
 psycopg2<2.8
 pillow<4.3
 boto3<1.5
 django-storages<1.7
+djangorestframework<3.7
